@@ -1,1 +1,113 @@
 @import url(./fonts.css);
+
+body { /*OPTIONAL*/
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4,
+ul { /*OPTIONAL*/
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.faq-component.faq {
+    min-height: 520px;
+    background-color: #fff;
+    width: 325px;
+    box-shadow: 0 0 15px 10px rgb(0 0 0 / 25%);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    font-family: 'Kumbh';
+    font-weight: 400;
+    font-size: 12px;
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.faq-image-wrapper {
+    width: 240px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+.faq-image {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: -15px;
+    width: 100%;
+    height: auto;
+}
+
+.faq-image-bg {
+    margin-top: 60px;
+}
+
+.faq-text {
+    margin-top: 120px;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    gap: 40px;
+}
+
+.faq__title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+}
+
+.faq-list {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-list__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.faq-list__question:first-child {
+    margin-top: 0;
+}
+
+.faq-list__question:hover .faq-list__answer{
+    display: block;
+}
+
+.faq-list__question::after {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: hsl(240, 5%, 91%);
+    position: absolute;
+    bottom: -20px;
+    pointer-events: none;
+}
+
+.faq-list__answer {
+    margin-top: 20px;
+    margin-right: 60px;
+    display: none;
+}
