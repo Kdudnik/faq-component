@@ -13,8 +13,14 @@
 <body>
     <div class="faq-component faq">
         <div class="faq-image-wrapper">
-            <img src="./images/illustration-mobile.svg" class="faq-image" alt="Women illstration">
-            <img src="./images/./illustration-bg-mobile.svg" class="faq-image faq-image-bg">
+            <picture class="faq-image">
+                <source srcset="./images/illustration-desktop.svg" media="(min-width: 768px)" />
+                <img src="./images/illustration-mobile.svg" alt="Women illustration" />
+            </picture>
+            <picture class="faq-image faq-image-box">
+                <source srcset="./images/illustration-box-desktop.svg"  media="(min-width: 768px)"/>
+                <img src="" alt="" />
+            </picture>
         </div>
         <div class="faq-text">
             <h4 class="faq__title">faq</h4>
