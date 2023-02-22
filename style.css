@@ -106,9 +106,26 @@ ul { /*OPTIONAL*/
 }
 
 .faq-list__answer {
+    transition: .5s;
     margin-top: 20px;
     margin-right: 60px;
-    display: none;
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    height: 0;
+}
+
+.faq-component .drop-down {
+    padding-bottom: 75px;
+}
+
+.faq-component .drop-down .faq-list__answer {
+    opacity: 1;
+    visibility: visible;
+    height: 75px;
+    top: 25%;
 }
 
 @media screen and (min-width: 768px) {
