@@ -1,16 +1,13 @@
 let dropSwitcher = document.querySelectorAll(".faq-list__question")
-let dropped = null
-
-function dropSwitchState (el) {
-    el.classList.add('drop-down')
-    if(dropped !== null) {
-        dropped.classList.remove('drop-down')
-    }
-    dropped = el
-}
+let collapsed = null
 
 dropSwitcher.forEach(li => {
-    li.addEventListener('click', () => {
-        dropSwitchState(li)
+    li.addEventListener('click', (event) => {
+        if(collapsed != event.currentTarget) {
+            collapsed?.classList.remove('drop-down');
+            collapsed = event.currentTarget;
+        }
+
+        event.currentTarget.classList.toggle('drop-down')
     })
 })
